@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3</title>
+</head>
+<body>
+    <h1>SVG Example</h1>
+    <svg width="200" length="300">
+        <rect x="10" y="10" width="200" height="100" fill="plum"/>
+    </svg>
+    <svg width="100" length="200">
+        <circle cx="25" cy="30" r="5"  fill="lightblue"/>
+        <circle cx="40" cy="50" r="10" fill="lightblue"/>
+        <circle cx="60" cy="80" r="15" fill="lightblue" />
+    </svg>
+    <svg width="100" length="100">
+        <line x1="50" y1="80" x2="15" y2="40"
+        stroke="pink" stroke-width="7" />
+    </svg>
+    <h1>SVG Example(again)</h1>
+    <svg width="300" height="200">
+      <rect x="10" y="10" width="100" height="100" fill="plum" />
+      <circle cx="150" cy="150" r="50" fill="lightblue" />
+      <line x1="0" y1="0" x2="150" y2="150"
+          stroke="brown" stroke-width="10" />
+          </svg>
+
+    <h1>Canvas</h1>
+    <style>
+        canvas {
+          border: 5px solid #000;
+        }
+      </style>
+      <canvas id="myCanvas" width="400" height="200"></canvas>
+    
+      <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+    
+        ctx.fillStyle = 'lightblue';
+        ctx.fillRect(100, 150, 150, 100);
+    
+        ctx.beginPath();
+        ctx.arc(200, 100, 80, 0, Math.PI * 2, false);
+        ctx.fillStyle = 'plum';
+        ctx.fill();
+    
+        ctx.beginPath();
+        ctx.moveTo(250, 40);
+        ctx.lineTo(450, 250);
+        ctx.strokeStyle = 'brown';
+        ctx.lineWidth = 10;
+        ctx.stroke();
+      </script>
+      <br>
+      <br>
+      <br>
+      <h1>Audio</h1>
+      <media>
+        <audio controls autoplay loop>
+            <source src="https://file-examples.com/storage/fe98e6ab1965df346a899de/2017/11/file_example_MP3_700KB.mp3" type="audio/mp3">
+            Your browser does not support the audio tag
+        </audio>
+      </media>
+      <br>
+      <br>
+      <br>
+      <h1>Video</h1>
+      <media>
+        <video width="300" height="200" controls autoplay loop>
+            <source src="https://file-examples.com/storage/fe98e6ab1965df346a899de/2017/04/file_example_MP4_480_1_5MG.mp4">
+            Your browser does not support the video tag.
+        </video>
+      </media>
+</body>
